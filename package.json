@@ -1,21 +1,37 @@
 {
   "name": "@proslotbosllc/proteqt365-kit",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The Proteqt365 partner row for a ProSlot athlete card: the mark, the blurb, a button that opens the leaving-site dialog, and the dialog that shows the facility's checkout code and the referral disclosure.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "require": "./dist/cjs/index.js", "default": "./dist/index.js" },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/index.js"
+    },
     "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p . && tsc -p tsconfig.cjs.json && node -e \"require('fs').writeFileSync('dist/cjs/package.json','{\\\"type\\\":\\\"commonjs\\\"}\\n')\"",
     "typecheck": "tsc -p . --noEmit",
     "test": "npm run build && node --test tests/*.test.mjs"
   },
-  "peerDependencies": { "react": ">=18", "lucide-react": ">=0.400.0" },
+  "peerDependencies": {
+    "react": ">=18",
+    "lucide-react": ">=0.400.0"
+  },
   "license": "UNLICENSED",
-  "devDependencies": { "@types/react": "^19.0.0", "react": "^19.0.0", "react-dom": "^19.0.0", "lucide-react": "^1.7.0", "typescript": "^5.6.0" }
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^1.7.0",
+    "typescript": "^5.6.0"
+  }
 }
